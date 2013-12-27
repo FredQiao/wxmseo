@@ -1,0 +1,15 @@
+	</section><!-- end wrap -->	
+<div class="clear"></div>
+<script type="text/javascript">$("#awlpercent").animate({"width":"94px"});</script>
+<footer class="row wrap_16">
+	<a href="/wp-admin/" title=" <?php echo get_num_queries(); ?>-<?php printf(__('%s seconds'), timer_stop(0, 2)); ?>">网站管理</a> - <script language="javascript" type="text/javascript" src="http://js.users.51.la/395756.js"></script>
+<noscript><a href="http://www.51.la/?395756" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/395756.asp" style="border:none" /></a></noscript>  <br>
+Power by Power by <a href="http://www.wordpress.org/">WordPress</a>  Theme by <a href="http://blog.king51.com/">King51</a>
+</footer>   
+<?php wp_footer(); ?>
+<script type="text/javascript">
+	$("#awlpercent").animate({"width":"100px"});
+	setTimeout(function(){$("#awloading").hide(460)},1000);
+</script>
+</body>
+</html>

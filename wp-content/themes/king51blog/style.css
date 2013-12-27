@@ -1,0 +1,424 @@
+/*
+Theme Name:King51-blog
+Theme URI: http://blog.king51.com/2010-09-09/wordpress-theme-free-html5-css3-ajax-nested-comments/
+Description: Usering the html5+Css3. Designed by <a href="blog.king51.com/">King51</a>.
+Version: 0.9
+Author: king51
+Author URI: http://blog.king51.com/
+Tags: light, brown, two-columns, flexible-width, right-sidebar,  threaded-comments
+
+  Arclite Wordpress theme
+   http://blog.king51.com/
+
+  Design and coding by digitalnature
+    http://blog.king51.com/
+
+  The CSS, XHTML and design is released under GPL.
+    http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/* reset*/
+@charset "utf-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.4 
+2009-07-27
+Author: Richard Clark - http://richclarkdesign.com
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, dialog, figure, footer, header, 
+hgroup, menu, nav, section,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+	font:75%/1.5em Arial, Helvetica, "Liberation sans", "Bitstream Vera Sans", sans-serif;
+}
+
+article, aside, dialog, figure, footer, header, 
+hgroup, nav, section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted #000;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*------------end-------*/
+/*general*/
+
+/* 52framework General StyleSheet - contains styles for all the HTML elements this framework supports */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:52%/1.52em;
+}
+
+/* ** ** Common Addative Classes ** ** */
+.left  { float:left}
+.right { float:right}
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; width:0px; height:0px;}
+.hide  { display:none}
+
+.align_right    { text-align:right;}
+.align_left     { text-align:left;}
+.align_center   { text-align:center;}
+.align_justify  { text-align:justify;}
+
+a {	color:#525252;	}
+a:hover, a:focus { text-decoration:underline;}
+a:active, a:visited { }
+
+blockquote {
+		font-family: Georgia,"Times New Roman", Times, serif; 
+		margin:5px; 
+		padding:10px;
+		font-size:1.52em; 
+		color:#999; 
+		font-style:italic; 
+		line-height:1.3em; 
+		width:100%; 
+		quotes:none;
+	}
+	blockquote.left {border-right:1px dashed #ccc; width:35%;}
+	blockquote.right {border-left:1px dashed #ccc; width:35%;}
+
+/* ** ** Header Styles ** ** */
+h1, h2, h3, h4, h5 {margin:0 0 0.5em; line-height:1.1em;}
+h1 {	font-size:2.52em;} 
+h2 {	font-size:1.952em;} 
+h3 {	font-size:1.652em;} 
+h4 {	font-size:1.452em;} 
+h5 {	font-size:1.252em;} 
+h6 {	font-size:1.52em;}
+
+/* ** ** ul li's ** ** */
+ul li
+{
+	margin-left:25px;
+}
+
+/* ** ** custom select color ** ** */
+::selection {
+	background: #525252; /* Safari */
+	}
+::-moz-selection {
+	background: #525252; /* Firefox */
+	color:#fff;
+}
+/* ** ** paragraph styling ** ** */
+p {margin:0 0 1.52em;}
+	p img.left {float:left;margin:1.52em 1.52em 1.52em 0;padding:0;}
+	p img.right {float:right;margin:1.52em 0 1.52em 1.52em;}
+
+/* ** ** forms ** ** */
+form fieldset {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius:5px; padding-top:5px; padding-left:5px; border:1px solid #ccc; }
+form fieldset legend {font-size:1.4em; padding:0 5px;}
+form input[type=text], form input[type=email], form input[type=url] {-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius:4px; height:20px; margin-bottom:5px; border:1px solid #ccc; padding:4px 0 1px 5px;}
+form label {display:block; height:20px; font-size:1.2em;}
+
+
+strong   		{	font-weight:600;}
+em, dfn  		{	font-style:italic;}
+dfn 	 		{   font-weight:600;}
+sup, sub 		{   line-height:0;}
+abbr, acronym   {	border-bottom:1px dashed #ccc;}
+address 		{	margin:0 0 1.5em;font-style:italic;}
+del 			{	color:#666;}
+pre, code, tt   {	font:1em 'andale mono', 'lucida console', monospace;line-height:1.5; display:block;}
+code 			{	background-color:#d5d2d8; display:block; padding:0px 2px 4px 26px; line-height:1.67em;}
+pre 			{	margin:1.5em 0;white-space:pre;}
+/*------------------end----------------------------------*/
+/*grid*/
+
+/* 52framework grid
+
+16 cols by 52px, with an 8px gutter
+
+*/
+
+.col {
+	margin-left:10px; margin-right:10px;
+	display: inline;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+
+.row{
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.row .row {
+	margin: 0 -10px;
+	width: auto;
+	display: inline-block;
+}
+
+.col_1 {	width:40px;	 }
+.col_2 {	width:100px; }
+.col_3 {	width:160px; }
+.col_4 {	width:220px; }
+.col_5 {	width:280px; }
+.col_6 {	width:340px; }
+.col_7 {	width:400px; }
+.col_8 {	width:460px; }
+.col_9 {	width:520px; }
+.col_10{	width:580px; }
+.col_11{	width:640px; }
+.col_12{	width:700px; }
+.col_13{	width:760px; }
+.col_14{	width:820px; }
+.col_15{	width:880px; }
+.col_16{	width:940px; }
+
+/* for use on elements like input fields */
+
+.width_1 {	width:40px;	 }
+.width_2 {	width:100px; }
+.width_3 {	width:160px; }
+.width_4 {	width:220px; }
+.width_5 {	width:280px; }
+.width_6 {	width:340px; }
+.width_7 {	width:400px; }
+.width_8 {	width:460px; }
+.width_9 {	width:520px; }
+.width_10{	width:580px; }
+.width_11{	width:640px; }
+.width_12{	width:700px; }
+.width_13{	width:760px; }
+.width_14{	width:820px; }
+.width_15{	width:880px; }
+.width_16{	width:940px; }
+
+/*	
+	end
+	My start
+*/
+body{
+	background:url('images/body.gif') repeat-x scroll 0 0;
+	font-size: 80%; /* Resets 1em to 10px */
+	color: #333;
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif
+	}
+a, h2 a:hover, h3 a:hover {	color: #06c;text-decoration: none;	}
+a:hover {color: #147;text-decoration: underline;}
+p { margin:0 0 0.8em;}
+
+.header {height:122px; margin-bottom:10px}
+	.header .logo { height:92px;}
+	.header .logo h1{ padding-top:20px; margin:0; font: bold 3em/100% Impact, Charcoal, sans-serif;}
+	.header .logo h1 a{text-decoration:none; color:#444}
+	.header .logo h6 { margin:0; padding-top:5px; font-size:1.2em}
+	.header .logo h6 a{ color:#444}
+.nav{ height:30px; background-color:#333; border:#888 solid 1px;}	/* 导航 */	
+	.nav ul{ margin: 0; padding-top:5px}
+	.nav li{  float:left;}
+	.nav li a{text-decoration:none;font-size:14px;font-weight:bold;color:#fff;padding:0 2px}
+
+article h2 { margin:0; font-size:1.5em}
+	article {font-size: 1.2em;line-height: 1.6em; }
+	section , aside , article , article .content { margin-top:20px; }
+	article footer { background-color: #f8f8f8;	border-top: 1px solid #ddd;	border-bottom: 1px solid #ddd; padding:6px; text-align:center;font-family: Arial, Helvetica, Sans-Serif;font-size: 0.9em;color: #777;}
+	
+aside {font-size: 1.2em;line-height: 1.6em;}	
+	aside h2  {font-size: 1.3em;}
+	aside li{ margin-left:0px; list-style:none}
+	aside li ul{ margin-bottom:10px;}
+	aside li ul li{ margin-left:20px; margin-bottom:10px; padding-left:10px}
+footer { color:#777}
+
+small {	font-size: 0.9em;line-height: 1.5em; color:#777}
+
+/* Loading */
+#awloading		{z-index:1;left:0;top:0;position:fixed}
+
+
+#awloading div	{position:absolute}
+#awlfull, #awlpercent {-moz-border-radius-bottomright:5px;height:28px;-webkit-border-bottom-right-radius:5px;opacity:.6}
+#awlfull		{background:#ECC779;width:100px}
+#awlpercent 	{background:#c44;width:6px;}
+#awlt			{font-size:16px;z-index:2;width:100px;color:#fff;padding:5px 0 5px 9px}
+
+/*not user*/
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+	
+/* Thanks to Brain's Threaded Comments */
+.commhead 		 					{padding:3px 8px 6px; background:#eee;border-top:1px solid #cdc; margin:0 0 10px}
+
+.commentList { clear:both}
+	.commentList li					{ margin:6px 0px 10px 0px; padding-left:0px; list-style:none; clear:both ;overflow:auto; zoom:1}
+	.commentList .odd				{background-color: #eee } 
+.comment 							{padding:4px;background-color:#fff; border: #CCC solid 1px;}
+	.comment .vcard					{ width:70px; text-align:center; float:left}
+	.comment .vcard	 dt				{ display:block; height:20px}
+	
+.comment dd							{ margin-left:80px;}
+
+.comment .reply { float:right}
+.comment .children { margin-left:70px}
+.comment .children .comment { border-bottom:#09C solid 3px}
+
+.comment #respond { margin:9px}
+#respond {padding:10px; border:1px solid #c2dcff; background-color:#f5faff; clear:both}
+#respond h3{ font-size:16px}
+#respond h3 small{ float:right}
+#respond p{ margin:3px; padding:0}
+#respond form div {margin-bottom:10px;}
+#respond form label { }
+#respond form input {padding:3px 3px 3px 2px;}
+#respond form textarea {width:98%; padding:5px; line-height:22px;}
+#respond form input,#respond form textarea{border:1px solid #c2dcff;}
+#respond .comment-form-url input{ margin-left:8px}
+#respond form #submit { width:104px; height:30px; line-height:30px; border:none; cursor:pointer; color:#fff; font-weight:bold; padding:0; background-color: #09F}
+
+
+/* ~ Comments Related */
+
+/* ~ pre */
+pre ,code { padding:8px; background-color: #eee; border:#ccc solid 1px;white-space: pre-wrap;   
+white-space: -moz-pre-wrap;
+word-break: break-all;     
+word-wrap: break-word; }
+
+/* `~ foot */
+
+footer{ margin:10px auto}
+
+/* pagebar classes
+-------------------------------------------------------------- */
+
+.pagebar {
+	padding: 0px;
+	margin: 16px 0px;
+	text-decoration: none;
+}
+
+.pagebar a {
+	border: 1px solid #bbb;
+	text-decoration: none;
+	padding: 0.1em 0.4em;
+	color:#212236;
+}
+
+.pagebar a:visited {
+	text-decoration: none;
+	padding: 0.1em 0.4em;
+}
+
+.pagebar .break {
+	padding: 2px 6px 2px 6px;
+	border: none;
+	text-decoration: none;
+}
+
+.pagebar .this-page {
+	border: 1px solid #bbb;
+	padding: 0.1em 0.4em;
+	font-weight: bold;
+	background: #fff;
+	color: #F00;
+}
+
+.pagebar a:hover {
+	background: #9C0;
+	color: #fff;
+}
+
+.pagebar .inactive
+{
+   border: 1px solid #CCC;
+	 color: #CCC;
+   text-decoration: none;
+   padding: 0.1em 0.4em;
+}

@@ -1,0 +1,699 @@
+/*
+Theme Name: 浩子窝窝v1
+Theme URI: http://www.hzoo.info/
+Description: Produced by hzoo , 2010-10-30.
+Date: 2010-10-30
+hzoo: 1.0
+Author: 浩子窝窝
+Author URI: http://www.hzoo.info/
+Tags: Simple Notes,black,white,Theme,widgets,plugins,wordpress.
+*/
+
+/************************* Reset Browser Default CSS : BEGIN ***************************/
+
+*{margin:0;padding:0;border:0;}
+ol,ul,li{list-style:none;}
+blockquote,q{quotes:none;}
+a img, :link img, :visited img{border:0}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{border-collapse:collapse;border-spacing:0;}
+
+a:link{text-decoration:none; color:#666;}
+a:active{text-decoration:underline; color:#248cc1;}
+a:visited{text-decoration:none; color:#666;}
+a:focus{text-decoration:underline; outline:none;}
+a:hover{text-decoration:underline; color:#000;}
+
+h1{
+	
+}
+h2{
+	font-size:14px;
+}
+h3{
+	
+}
+h4{
+	
+}
+h5{
+	
+}
+h6{
+	
+}
+
+/************************* Some  CSS : BEGIN ***************************/
+
+ /*清除浮动*/
+.clearfix:after {
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+
+/* no ie mac \*/
+* html .clearfix {
+    height: 1%;
+}
+/* end */
+* + html .clearfix {
+    height: 1%;
+}
+
+.float-left{ float:left}
+.float-right{ float:right;}
+
+.clear-both{ clear:both;}
+.clear-left{ clear:left;}
+.clear-right{ clear:right;}
+.box {
+	clear:both;
+}
+/************************* WordPress Default CSS : BEGIN ***************************/
+.aligncenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    border: 1px solid #ccc;
+    background-color: #e0e0e0;
+}
+.alignleft {
+    float: left;
+    margin: 5px 5px 0 0;
+}
+.alignright {
+    float: right;
+    margin: 5px 0 0 5px;
+}
+blockquote {
+	font-size:12px;
+    padding:5px; 
+    background-color: #f7f7f7; 
+    border-left: 4px solid #e0e0e0; 
+    margin: 5px 30px 5px 10px; 
+}
+img.alignleft {
+    float: left;
+    padding: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    margin: 5px 5px 0 0;
+}
+img.alignright {
+    float: right;
+    padding: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    margin: 5px 0 0 5px;
+}
+a img.attachment-thumbnail {
+    padding: 4px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    margin: 0 0 5px 5px;
+    float: left;	
+}
+.wp-caption {
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    background-color: #fff;
+    padding-top: 4px;
+}
+.wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 0 4px 5px;
+    margin: 0;
+    color: #666;
+    font-style: italic;
+}
+
+/************************* Global Layout SET: BEGIN ***************************/
+body {
+	background: #f7eccb url(images/wrapBg.jpg) top no-repeat;
+	font: 12px Arial;
+	color: #222;
+	text-align: center;
+}
+#wrapper {
+	width: 800px;
+	margin: auto auto;
+	text-align: left;
+	padding-bottom: 10px;
+        background: #fff;
+}
+#shearder {
+	width: 800px;
+	margin: auto auto;
+	text-align: left;
+	padding-bottom: 10px;
+}
+#header {
+	padding-top: 0px;
+	margin-bottom: 0px;
+background: url(images/topbg11.jpg) repeat-x;
+}
+
+#content {
+	display:inline;
+	clear: both;
+	width: 530px;
+	float: left;
+	padding: 6px 0px 10px 25px;
+	margin: 10px 0 10px 0;
+	margin-right:15px;
+}
+#sidebar{
+	float:right;
+	margin:0px 0 10px 0;
+	width:222px;
+	background: #f9e28e;
+        border-left:1px solid #ddb957;
+       
+}
+#sidebar .left-sidebar{
+	float:left;
+	width:152px;
+	margin-right:18px;
+}
+#sidebar .right-sidebar{
+	float:left;
+	width:152px;
+}
+
+#footer{
+	height: 40px;
+	border-top:1px solid #000;
+	margin-top:0px;
+	background-color: #222;
+	text-align:center;
+}
+#footer p{
+	color: #fff;
+	border-top:1px solid #fff;
+	padding-top:10px;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+#footer p a{
+	color: #f9e28e;
+}
+#footer p a.vanj{
+	color: #f9e28e;
+	font-weight: bold;
+}
+/************************* Every Elements SET: BEGIN ***************************/
+
+#header .wrapperhearder{
+	width: 800px;
+	margin: auto auto;
+	text-align: left;
+}
+#header .wrapperhearderb{
+	width: 800px;
+	margin: auto auto;
+	text-align: left;
+}
+#header #logo  {
+	float: left;
+	padding-bottom: 10px;
+
+}
+#header #logo h1 a {
+	font: 23px/1 georgia, times new roman, times, serif;
+	color: #434343;
+	text-decoration:underline;
+	font-weight:bold;
+}
+#header #logo h1 a:hover {
+	font: 23px/1 georgia, times new roman, times, serif;
+	color: #000;
+	text-decoration:underline;
+	font-weight:bold;
+}
+#header form {
+	float: right;
+	width: 226px; height: 26px;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	background: url(images/search.png) no-repeat 0 0;	
+}
+#header form input {
+	border: 0;
+	float: left;
+	width: 180px;
+	background-color: transparent;
+	font-size: 1em;
+	color: #848DB3;
+	margin: 5px 10px;
+}
+#header form button {
+	float: right;
+	width: 26px; height: 26px;
+	text-indent: -9999px;
+	border: 0;
+	background-color: transparent;
+}
+#header ul li {
+	float: left;
+}
+#header .bottom {
+	clear: both;
+}
+#header .bottom p.breadcrumb{
+	margin-left: 1px;
+	padding-left: 10px;
+}
+#header .pages {
+	clear: both;
+	height: 13px;
+	
+}
+#header .pages li {
+	float: right;
+	font-size: 13px;
+
+	padding-left:5px;
+}
+#header .pages li.rssfeed {
+	float: right;
+	font-size: 13px;
+	background: url(images/icons/feed.gif) no-repeat 0 8px;
+	padding-left:14px;
+}
+#header .pages li.mail {
+	float: right;
+	font-size: 13px;
+	background: url(images/icons/email.gif) no-repeat 0;
+	padding-left:14px;
+}
+#header .pages li.home a{
+	float: right;
+	padding-left:18px;
+	background: url(images/icons/home.gif) no-repeat 0;
+	overflow: hidden;
+} 
+#header .pages li a {
+	line-height:30px;
+	color: #f1f1f1;
+	display: block;
+	padding: 0 5px;
+}
+#navibg {
+	clear: both;
+	width: 800px;
+	margin: auto auto;
+	background: url(images/daohang.png) repeat-x;
+	height: 40px;
+}
+#header .navigation {
+	clear: both;
+	width: 800px;
+	margin: auto auto;
+	height: 40px;
+	overflow: hidden;
+	background: url(images/divider2.gif) no-repeat center left;
+}
+#header .navigation li {
+}
+#header .navigation li.current-cat a{
+	background: #f6be11;
+	color:#fff;	
+}
+#header .navigation li a {
+	color: #ffffff;
+	font-size:14px;
+	display: block;
+	padding: 10px 12px 10px 12px;
+	background: url(images/divider2.gif) no-repeat center right;
+}
+#header .navigation li a:hover{
+	background: #000;
+	color:#ffffff;
+}
+#header .bottom {
+	border: 0px solid #EEEEEE;
+	height: 18px;
+	font-size: 0.9em;
+	margin: 4px 0;
+}
+#header .bottom .breadcrumb { 
+	font-size:12px;
+	float: left;
+	padding: 2px 0;
+	color: #6B6C6C;
+}
+#header .bottom .breadcrumb strong {
+	color: #005588;
+}
+#header .bottom .subscribe {
+	float: right;
+	font-family: Arial;
+}
+#header .bottom .subscribe li {
+	font-weight: bold;
+	padding-left: 1px;
+}
+#header .bottom .subscribe li a {
+	text-decoration: none;
+	display: block;
+	padding: 2px 10px;
+}
+#header .bottom .subscribe li.rssfeed a{
+	background: url(images/icons/feed.gif) no-repeat 0 ;
+	padding-left:18px;
+}
+#header .bottom .subscribe li.mail a{
+	background: url(images/icons/email.gif) no-repeat 0 top;
+	padding-left:19px;
+}
+#header .bottom .subscribe li.twitter a{
+	background: url(images/icons/twitter_16.gif) no-repeat 0 ;
+	padding-left:18px;	
+}
+/** END header **/
+
+#content .postnav{
+	padding:5px 10px;
+	background:#f1f1f1;
+	border:#dfdfdf 1px solid;
+	margin-bottom:15px;
+}
+
+#content .post{
+	margin-bottom:20px;
+}
+#content .post h2.title{
+	clear: both;
+	background: url(images/icons/ch3.gif) no-repeat 0 2px;;
+	overflow: hidden;
+	line-height: 20px;
+	border-bottom:dashed 1px #ccc;
+	padding-left: 20px;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	font-size:16px;
+}
+#content .post h2.title a{
+	color:#333;
+}
+#content .post h2.title a:hover{
+	color:#000;
+	text-decoration: blink;
+}
+#content .post .postmeta{
+	color:#698595;
+}
+#content .post .postmeta a{
+	line-height: 0px;
+	height: 0px;
+	color:#698595;
+}
+#content .post .postmeta ul li{
+	float: left;
+	line-height: 18px;
+	height: 18px;
+	overflow: hidden;  
+	margin-right: 10px;
+}
+#content .post .postmeta .meta-author{
+	padding-left:20px;
+	background:url(images/icons/user.gif) no-repeat 0 top;
+}
+#content .post .postmeta .meta-date{
+	padding-left:20px;
+	background:url(images/icons/date.gif) no-repeat 0 top;
+}
+#content .post .postmeta .meta-views{
+	padding-left:20px;
+	background:url(images/icons/read.gif) no-repeat 0 top;
+}
+#content .post .postmeta .meta-cat{
+	padding-left:20px;
+	background:url(images/icons/organisation.gif) no-repeat 0 top;
+}
+#content .post .postmeta .meta-comments{
+	padding-left:20px;
+	background:url(images/icons/comment.gif) no-repeat 0 top;
+}
+#content .post .content{
+	overflow:hidden;
+	margin-top:20px;
+	line-height:200%;
+	margin-bottom:10px;
+}
+#content .post .content p{
+	margin:0px 0px;
+}
+#content .post .tags{
+	float:left;
+	padding-left:20px;
+	font-size:12px;
+	background:url(images/icons/tag_blue.gif) no-repeat 0;
+}
+#content .post .morelink{
+	float:right;
+	padding-left:20px;
+	font-size:12px;
+	background:url(images/icons/folder_go.gif) no-repeat 0 bottom;
+}
+#content .post .forward{
+	float:right;
+}
+
+#comments{
+	border-top:2px solid #f1f1f1;
+	padding-top:10px;
+}
+#comments h4{
+	font-size:14px;
+}
+#comments ol.commentlist li.comment{
+	margin-bottom:30px;
+}
+#comments ol.commentlist li ul.children li{
+	margin-left:20px;
+	margin-top:10px;
+}
+ol.commentlist{
+	margin:20px 0px;
+}
+#comments ol.commentlist li.comment .comment-author{
+	position:relative;
+	color:#333;
+}
+#comments ol.commentlist li.comment .comment-author .reply{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+#comments ol.commentlist li.comment .comment-author .reply a{
+	background:#f1f1f1;
+	padding:1px 8px;
+	background:url(images/icons/arrow_undo.gif) no-repeat;
+}
+#comments ol.commentlist li.comment .comment-author cite{
+	font-style:normal;
+	position:absolute;
+	top:2px;
+	left:45px;
+}
+#comments ol.commentlist li.comment .comment-author .comment-meta{
+	position:absolute;
+	top:20px;
+	left:45px;
+}
+#comments ol.commentlist li.comment .comment-body .message{
+	margin-left:45px;
+	border-top:1px solid #dfdfdf;
+	
+}
+#comments ol.commentlist li.comment .comment-body .message div{
+	border-top:1px solid #fff;
+	padding-top:5px;
+}
+.comment-author .avatar{
+	border:1px solid #dfdfdf;
+	background:#f1f1f1;
+	padding:2px;
+}
+#comments  .cpnavi{
+	margin-bottom:20px;
+}
+
+#comments  .cpnavi .page-numbers{
+	margin:0px 5px;
+}
+#comments  .cpnavi .page-numbers a{
+	
+}
+#comments  .cpnavi .current{
+	border-bottom:2px solid #ccc;
+}
+#respond{
+	
+}
+#respond h5{
+	color:#666;
+	font-size:14px;
+	margin-bottom:10px;
+}
+#respond input{
+	border:1px solid #dfdfdf;
+	margin-bottom:5px;
+	padding:3px;
+	width:150px;
+}
+#respond textarea{
+	width:400px;
+	border:1px solid #dfdfdf;
+	padding:5px;
+}
+#respond .submit{
+	background:#333;
+	color:#fff;
+	margin-top:5px;
+	outline:0;
+}
+.postnavi{
+	
+}
+.postnavi p.next{
+	font-size:14px;
+	padding:3px 0px;
+	background:url(images/icons/arrow_right.gif) no-repeat 0;
+	padding-left:20px;
+}
+.postnavi p.prev{
+	font-size:14px;
+	padding:3px 0px;
+	background:url(images/icons/arrow_left.gif) no-repeat 0;
+	padding-left:20px;
+}
+#sidebar .widget{
+	padding:10px;
+	margin-bottom:5px;
+}
+#sidebar .widget ul.tagsindex{
+	line-height: 22px;
+}
+#sidebar .widget li.linkcat h2{
+	padding-bottom:5px;
+	border-bottom:1px solid #f9e28e;
+
+}
+#sidebar .widget li.linkcat{
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+#sidebar .widget h3{
+	padding:5px 10px 10px 0px;
+	font-size:14px;
+}
+#sidebar .widget h2{
+	padding-bottom:5px;
+	border-bottom:1px solid #ddb957;
+	font-size:14px;
+}
+#sidebar .widget h4{
+	padding-bottom:5px;
+	border-bottom:1px solid #FF0000;
+	font-size:14px;
+}
+#sidebar .widget ul{
+	line-height: 18px;
+	padding-top:5px;
+	border-top:1px solid #ddb957;
+}
+#sidebar .widget ul li{
+	padding:5px 0px;
+	border-bottom:1px dashed #ffffe0;
+}
+#sidebar .widget ul.newbox li{
+	padding:2px 0px 5px 2px;
+	background: url(images/icons/newbox1.gif) no-repeat 0 3px;
+}
+#sidebar .widget ul.monthlybox li{
+	padding:2px 0px 5px 2px;
+	background: url(images/icons/monthlybox1.gif) no-repeat 0 3px;
+}
+#sidebar .widget li.linkcat ul li{
+	padding:2px 0px 5px 2px;
+	background: url(images/icons/linkbox1.gif) no-repeat 0 3px;
+}
+.sub-feed{
+	text-align:center;
+	border:1px solid #333333;
+	padding:3px;
+	width:150px;
+	background:#A3E12F;
+	margin-top:5px;
+}
+/************************* Plugin WP-PageNavi Css : BEGIN ***************************/
+#content .pagenavi{
+	border-top:1px solid #dfdfdf;	
+}
+.wp-pagenavi{
+	padding-top:20px;
+	border-top:2px solid #f1f1f1;
+}
+.wp-pagenavi .pages{
+	font-size:12px;
+	margin-right:10px;
+	background:#f1f1f1;
+	border:#dfdfdf 1px solid;
+	padding:3px;
+}
+.wp-pagenavi a{
+	background:#f1f1f1;
+	border:#dfdfdf 1px solid;
+	padding:3px 7px;
+	font-size:12px;
+	margin:0px 7px;
+}
+.wp-pagenavi .current{
+	background:#ccc;
+	border:#dfdfdf 1px solid;
+	padding:3px 7px;
+	font-size:12px;
+	margin:0px 7px;
+}
+
+/************************* Plugin WordPress Related Posts Css : BEGIN ***************************/
+.related-posts{
+	padding-bottom:20px;
+	border-bottom:1px solid #dfdfdf;
+}
+h2.related_post_title{
+	font-weight:400;
+	font-size:14px;
+	color:#666;
+	margin-bottom:5px;
+}
+ul.related_post{
+	padding-left:10px;
+}
+ul.related_post li{
+	padding:3px 0;
+	background:url(images/icons/items.gif) no-repeat 0;
+	padding-left:15px;
+}
+
+
+#wrapper .notitle {
+	color: #333;
+	padding-top: 5px;
+	line-height: 18px;
+}
