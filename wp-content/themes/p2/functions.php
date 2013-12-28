@@ -343,7 +343,7 @@ function p2_the_title( $before = '<h2>', $after = '</h2>', $echo = true ) {
 			$out = $before . $t . $after;
 		}else{
 			if(get_post_meta($temp->ID, "post_refpage_link", true)!=null&&get_post_meta($temp->ID, "post_refpage_link", true)!=""){
-				if(get_post_meta($temp->ID, "post_refpage_ref", true)!=null){
+				if(get_post_meta($temp->ID, "post_refpage_ref", true)!=null && get_post_meta($temp->ID, "post_refpage_ref", true) != ""){
 					$out = $before . '<a target="_blank" href="' . get_post_meta($temp->ID, "post_refpage_link", true) . '" ref="' . get_post_meta($temp->ID, "post_refpage_ref", true) . '">' . $t . '&nbsp;</a>' . $after;
 				}else{
 					$out = $before . '<a target="_blank" href="' . get_post_meta($temp->ID, "post_refpage_link", true) . '">' . $t . '&nbsp;</a>' . $after;
