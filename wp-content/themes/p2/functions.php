@@ -388,6 +388,7 @@ function p2_comments( $comment, $args ) {
 			<?php echo get_comment_author_link(); ?>
 			<span class="meta">
 				<?php echo p2_date_time_with_microformat( 'comment' ); ?>
+				<?php if(SHOW_ACTIONS):?>
 				<span class="actions">
 					<a class="thepermalink" href="<?php echo esc_url( get_comment_link() ); ?>" title="<?php esc_attr_e( 'Permalink', 'p2' ); ?>"><?php _e( 'Permalink', 'p2' ); ?></a>
 					<?php
@@ -398,6 +399,7 @@ function p2_comments( $comment, $args ) {
 
 					?>
 				</span>
+				<?php endif;?>
 			</span>
 		</h4>
 		<div id="commentcontent-<?php comment_ID(); ?>" class="<?php echo esc_attr( $content_class ); ?>"><?php

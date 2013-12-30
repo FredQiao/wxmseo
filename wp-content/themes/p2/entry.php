@@ -33,8 +33,9 @@
 			if ( ! is_page() ) {
 				echo p2_date_time_with_microformat();
 			} ?>
+			<?php if(SHOW_ACTIONS):?>
 			<span class="actions">
-				<!-- <a href="<?php the_permalink(); ?>" class="thepermalink<?php if ( is_singular() ) { ?> printer-only<?php } ?>" title="<?php esc_attr_e( 'Permalink', 'p2' ); ?>"><?php _e( 'Permalink', 'p2' ); ?></a> -->
+				 <a href="<?php the_permalink(); ?>" class="thepermalink<?php if ( is_singular() ) { ?> printer-only<?php } ?>" title="<?php esc_attr_e( 'Permalink', 'p2' ); ?>"><?php _e( 'Permalink', 'p2' ); ?></a> 
 				<?php
 				if ( ! is_singular() )
 					$before_reply_link = ' | ';
@@ -53,6 +54,7 @@
 
 				<?php do_action( 'p2_action_links' ); ?>
 			</span>
+			<?php endif;?>
 			<?php if ( is_object_in_taxonomy( get_post_type(), 'post_tag' ) ) : ?>
 				<span class="tags">
 					<?php tags_with_count( '', __( '<br />Tags:' , 'p2' ) .' ', ', ', ' &nbsp;' ); ?>&nbsp;
@@ -109,7 +111,6 @@
 	);
 
 	?>
-
 	<?php if ( get_comments_number() > 0 && ! post_password_required() ) : ?>
 		<div class="discussion" style="display: none">
 			<p>

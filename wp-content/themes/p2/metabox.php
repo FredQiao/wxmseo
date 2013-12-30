@@ -9,7 +9,17 @@ array(
         "post_refpage_ref" => array(      
             "name" => "post_refpage_ref",      
             "std" => "",      
-            "title" => "超链接的ref属性值")      
+            "title" => "超链接的ref属性值"),
+
+		"our_keyword" => array(      
+            "name" => "our_keyword",      
+            "std" => "",      
+            "title" => "关键词"),      
+
+        "our_order" => array(      
+            "name" => "our_order",      
+            "std" => "",      
+            "title" => "排序")  
 );
 
 function new_meta_boxes() {
@@ -29,7 +39,7 @@ function new_meta_boxes() {
 function create_meta_box() {
 	global $theme_name;
 	if ( function_exists('add_meta_box') ) {
-		add_meta_box( 'new-meta-boxes', '原文链接模块', 'new_meta_boxes', 'post', 'normal', 'high' );
+		add_meta_box( 'new-meta-boxes', '自定义字段模块', 'new_meta_boxes', 'post', 'normal', 'high' );
 	}
 }
 

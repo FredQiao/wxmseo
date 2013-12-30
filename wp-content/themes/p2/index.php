@@ -11,7 +11,9 @@
  * @package P2
  */
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+require_once( get_template_directory() . '/inc/config.php' );
+?>
 
 <div class="sleeve_main">
 	<?php if ( p2_user_can_post() && !is_archive() ) : ?>
@@ -28,10 +30,11 @@
 				<?php printf( _x( 'Updates from %s', 'Month name', 'p2' ), get_the_time( 'F, Y' ) ); ?>
 
 			<?php endif; ?>
-
+		<?php if(SHOW_TOGGLE_AND_KEYBOARD):?>
 			<span class="controls">
 				<a href="#" id="togglecomments"> <?php _e( 'Toggle Comment Threads', 'p2' ); ?></a> | <a href="#directions" id="directions-keyboard"><?php _e( 'Keyboard Shortcuts', 'p2' ); ?></a>
 			</span>
+			<?php endif;?>
 		</h2>
 
 		<ul id="postlist">
@@ -59,4 +62,4 @@
 
 </div> <!-- sleeve -->
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

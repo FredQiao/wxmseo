@@ -17,10 +17,11 @@
 
 		<h2>
 			<?php printf( _x( 'Updates from %s', 'Author name', 'p2' ), p2_get_archive_author() ); ?>
-
+		<?php if(SHOW_TOGGLE_AND_KEYBOARD):?>
 			<span class="controls">
 				<a href="#" id="togglecomments"> <?php _e( 'Toggle Comment Threads', 'p2' ); ?></a> | <a href="#directions" id="directions-keyboard"><?php _e( 'Keyboard Shortcuts', 'p2' ); ?></a>
 			</span>
+		<?php endif;?>
 		</h2>
 
 		<ul id="postlist">

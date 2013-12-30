@@ -12,9 +12,11 @@
 	<div id="main">
 		<h2>
 			<?php printf( __( 'Search Results for: %s', 'p2' ), get_search_query() ); ?>
+			<?php if(SHOW_TOGGLE_AND_KEYBOARD):?>
 			<span class="controls">
 				<a href="#" id="togglecomments"> <?php _e( 'Toggle Comment Threads', 'p2' ); ?></a> | <a href="#directions" id="directions-keyboard"><?php _e( 'Keyboard Shortcuts', 'p2' ); ?></a>
 			</span>
+			<?php endif;?>
 		</h2>
 
 		<?php if ( have_posts() ) : ?>

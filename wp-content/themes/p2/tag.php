@@ -6,15 +6,18 @@
  */
 ?>
 <?php get_header(); ?>
+<?php require_once( get_template_directory() . '/inc/config.php' );?>
 <?php $tag_obj = $wp_query->get_queried_object(); ?>
 
 <div class="sleeve_main">
 
 	<div id="main">
-		<h2><?php printf( __( 'Tagged: %s', 'p2' ), single_tag_title( '', false) ); ?>
+	<h2><?php printf( __( 'Tagged: %s', 'p2' ), single_tag_title( '', false) ); ?>
+	<?php if(SHOW_TOGGLE_AND_KEYBOARD):?>
 			<span class="controls">
 				<a href="#" id="togglecomments"> <?php _e( 'Toggle Comment Threads', 'p2' ); ?></a> | <a href="#directions" id="directions-keyboard"><?php _e( 'Keyboard Shortcuts', 'p2' ); ?></a>
 			</span>
+	<?php endif;?>
 		</h2>
 
 		<?php if ( have_posts() ) : ?>
@@ -44,4 +47,4 @@
 
 </div> <!-- sleeve -->
 
-<?php get_footer(); ?>
+<?php //get_footer(); ?>

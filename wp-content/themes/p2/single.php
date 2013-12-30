@@ -14,14 +14,14 @@
 		<?php if ( have_posts() ) : ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
+			<?php if(SHOW_TOGGLE_AND_KEYBOARD):?>
 				<div class="controls">
 					<a href="#" id="togglecomments"><?php _e( 'Hide threads', 'p2' ); ?></a>
 					<span class="sep">&nbsp;|&nbsp;</span>
 					<a href="#directions" id="directions-keyboard"><?php  _e( 'Keyboard Shortcuts', 'p2' ); ?></a>
 					<span class="single-action-links"><?php do_action( 'p2_action_links' ); ?></span>
 				</div>
-
+			<?php endif;?>
 				<ul id="postlist">
 		    		<?php p2_load_entry(); ?>
 				</ul>
