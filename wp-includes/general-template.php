@@ -653,12 +653,11 @@ function wp_title($sep = '&raquo;', $display = true, $seplocation = '') {
 		$title_array = explode( $t_sep, $title );
 		$title = $prefix . implode( " $sep ", $title_array );
 	}
-
 	$title = apply_filters('wp_title', $title, $sep, $seplocation);
 
 	// Send it out
 	if ( $display )
-		echo $title;
+		echo substr($title, 0, strpos($title,"|"));
 	else
 		return $title;
 

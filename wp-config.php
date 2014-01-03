@@ -21,7 +21,7 @@ define('DB_NAME', 'wxm_site');
 define('DB_USER', 'root');
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', 'wxmadmin');
+define('DB_PASSWORD', '123456');
 
 /** MySQL主机 */
 define('DB_HOST', 'localhost:3306');

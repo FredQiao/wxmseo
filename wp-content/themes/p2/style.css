@@ -50,6 +50,7 @@ pre, code {
 #header .sleeve {
 	display: inline-block;
 	margin-top: 40px;
+        width:100%;
 }
 h1 {
 	display: inline-block;
