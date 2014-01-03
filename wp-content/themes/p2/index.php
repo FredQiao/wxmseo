@@ -62,4 +62,4 @@ require_once( get_template_directory() . '/inc/config.php' );
 
 </div> <!-- sleeve -->
 
-<?php //get_footer(); ?>
+<?php get_footer(); ?>

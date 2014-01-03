@@ -342,11 +342,11 @@ function p2_the_title( $before = '<h2>', $after = '</h2>', $echo = true ) {
 		if ( is_single() ){
 			$out = $before . $t . $after;
 		}else{
-			if(get_post_meta($temp->ID, "post_refpage_link", true)!=null&&get_post_meta($temp->ID, "post_refpage_link", true)!=""){
-				if(get_post_meta($temp->ID, "post_refpage_ref", true)!=null && get_post_meta($temp->ID, "post_refpage_ref", true) != ""){
-					$out = $before . '<a target="_blank" href="' . get_post_meta($temp->ID, "post_refpage_link", true) . '" ref="' . get_post_meta($temp->ID, "post_refpage_ref", true) . '">' . $t . '&nbsp;</a>' . $after;
+			if(get_post_meta($temp->ID, "post_refpage_link_value", true)!=null&&get_post_meta($temp->ID, "post_refpage_link_value", true)!=""){
+				if(get_post_meta($temp->ID, "post_refpage_ref_value", true)!=null && get_post_meta($temp->ID, "post_refpage_ref_value", true) != ""){
+					$out = $before . '<a target="_blank" href="' . get_post_meta($temp->ID, "post_refpage_link_value", true) . '" ref="' . get_post_meta($temp->ID, "post_refpage_ref_value", true) . '">' . $t . '&nbsp;</a>' . $after;
 				}else{
-					$out = $before . '<a target="_blank" href="' . get_post_meta($temp->ID, "post_refpage_link", true) . '">' . $t . '&nbsp;</a>' . $after;
+					$out = $before . '<a target="_blank" href="' . get_post_meta($temp->ID, "post_refpage_link_value", true) . '">' . $t . '&nbsp;</a>' . $after;
 				}
 			}else{
 				$out = $before . '<a href="' . get_permalink( $temp->ID ) . '">' . $t . '&nbsp;</a>' . $after;
@@ -640,7 +640,7 @@ function prologue_comment_depth( $comment_id ) {
 }
 
 function prologue_poweredby_link() {
-	return apply_filters( 'prologue_poweredby_link', sprintf( '<a href="%1$s" rel="generator">%2$s</a>', esc_url( __('http://wordpress.org/', 'p2') ), sprintf( __('Proudly powered by %s.', 'p2'), 'WordPress' ) ) );
+	return apply_filters( 'prologue_poweredby_link', sprintf( '<a href="%1$s" rel="generator">%2$s</a>', esc_url( __('#', 'p2') ), sprintf( __('Proudly powered by %s.', 'p2'), '微信萌' ) ) );
 }
 
 function p2_hidden_sidebar_css() {

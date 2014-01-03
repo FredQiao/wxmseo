@@ -20,12 +20,12 @@
 			get_the_author_meta( 'user_nicename' )
 		); ?>
 
-		<a href="<?php echo esc_attr( $author_posts_url ); ?>" title="<?php echo esc_attr( $posts_by_title ); ?>" class="post-avatar">
+		<!-- <a href="<?php echo esc_attr( $author_posts_url ); ?>" title="<?php echo esc_attr( $posts_by_title ); ?>" class="post-avatar"></a>-->
 			<?php echo get_avatar( get_the_author_meta('user_email'), 48 ); ?>
-		</a>
+		
 	<?php endif; ?>
 	<h4>
-		<?php if ( ! is_page() ): ?>
+		<?php if ( ! is_page() && 1==2): ?>
 			<a href="<?php echo esc_attr( $author_posts_url ); ?>" title="<?php echo esc_attr( $posts_by_title ); ?>"><?php the_author(); ?></a>
 		<?php endif; ?>
 		<span class="meta">
