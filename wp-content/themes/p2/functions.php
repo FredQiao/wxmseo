@@ -640,7 +640,7 @@ function prologue_comment_depth( $comment_id ) {
 }
 
 function prologue_poweredby_link() {
-	return apply_filters( 'prologue_poweredby_link', sprintf( '<a href="%1$s" rel="generator">%2$s</a>', esc_url( __('http://wordpress.org/', 'p2') ), sprintf( __('Proudly powered by %s.', 'p2'), 'WordPress' ) ) );
+	return apply_filters( 'prologue_poweredby_link', sprintf( '<a href="%1$s" rel="generator">%2$s</a>', esc_url( __('#', 'p2') ), sprintf( __('Proudly powered by %s.', 'p2'), '微信萌' ) ) );
 }
 
 function p2_hidden_sidebar_css() {

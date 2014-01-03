@@ -5,7 +5,8 @@
  * @package P2
  */
 ?>
-<?php get_header(); ?>
+<?php get_header(); 
+require_once( get_template_directory() . '/inc/config.php' );?>
 
 <div class="sleeve_main">
 
